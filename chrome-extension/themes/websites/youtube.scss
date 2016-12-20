@@ -217,6 +217,22 @@ a.yt-uix-button-epic-nav-item:hover {
 	background: no-repeat url(//s.ytimg.com/yts/imgbin/www-videomanager-vflTnl7Mo.webp) 0 -228px !important;
 }
 
+// Notification top
+.yt-alert-actionable.yt-alert-info{
+	background-color: $theme-tooltip-background !important;
+	color: $theme-tooltip-text !important;
+}
+
+// Language-picker
+#yt-picker-language-footer button {
+	background-color: transparent !important;
+}
+
+// Progress bar on thumbnails
+.resume-playback-progress-bar {
+	background-color: $theme-button-background !important;
+}
+
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 // Video page
 //----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -230,6 +246,13 @@ a.yt-uix-button-epic-nav-item:hover {
 // Share buttons
 .share-service-button {
 	@include invert-back();
+}
+.share-panel button {
+	background: transparent !important;
+	color: $theme-text !important;
+}
+.share-panel button span {
+	color: $theme-text !important;
 }
 
 // Tooltips when hover over cogwheel, cc, etc.
@@ -388,6 +411,11 @@ a.yt-uix-button-epic-nav-item:hover {
 	@include invert-back()
 }
 
+// Fix blue background on add-ticks when adding to playlist
+.playlist-status {
+	background-color: transparent !important;
+}
+
 // Fixe thumbnail preview when skipping video
 .ytp-preview {
 	@include invert-back()
@@ -434,13 +462,22 @@ a.yt-uix-button-epic-nav-item:hover {
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Invert profile header image
-.hd-banner-image {
-	@include invert-back()
+#c4-header-bg-container {
+	-webkit-filter: invert(100%) !important;
+}
+#header-links {
+	-webkit-filter: invert(100%) !important;
+}
+.channel-header-profile-image-container {
+	-webkit-filter: invert(100%) !important;
 }
 
 // Invert suscribe button
 .yt-uix-button-subscribe-branded:before {
 	@include invert-back()
+}
+.yt-uix-button-subscription-container > button.yt-uix-button-subscribe-branded {
+	background-color: invert-back-color(#e62117) !important;
 }
 
 // Invert devices image in the profile

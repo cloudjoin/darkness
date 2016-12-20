@@ -67,6 +67,16 @@ a {
 	background-color: $theme-background-box !important;
 }
 
+// background when viewing images
+._4d3w .stageWrapper {
+	background-color: $theme-background !important;
+}
+
+// Link to newsfeed
+._4q39 > a._2s25 {
+	color: $theme-link !important;
+}
+
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 // Un-invert icons
 //----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -579,6 +589,14 @@ textarea._4h98 {
 	@include invert-back();
 }
 
+// Chat search
+input[type="text"]._58al {
+	background-color: transparent !important;
+}
+._3rh8 {
+	background-color: $theme-background-toolbar !important;
+}
+
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 // Chat window (incl. emoticons, stickers etc.)
 //----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -658,6 +676,9 @@ div[aria-label*="sticker"] {
 }
 
 // Green "online" status dot - in chat windows
+.minimized ._3olv._2nlt{
+	-webkit-filter: invert(0%) !important;
+}
 ._2nlt, ._3olv._2nlt {
 	@include invert-back();
 }
@@ -673,7 +694,7 @@ div[aria-label*="sticker"] {
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
 // lightbox background
-._3qx ._3ixn {
+._3qx ._3ixn, ._1oye, ._4-of, ._1oyf, ._1oyh {
 	background-color: rgba(darken($theme-background-box, 10%), 0.9) !important;
 	border-color: $theme-border !important;
 }
@@ -917,6 +938,18 @@ body ._19u- ._3ixn {
 	color: $theme-text !important;
 }
 
+// Create group button
+._4jy2 {
+	background-color: $theme-button-background !important;
+	border-color: $theme-button-background !important;
+	color: $theme-button-text !important;
+}
+
+// Search group
+.uiSearchInput button {
+	background-color: transparent !important;
+}
+
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 // Misc
 //----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1030,3 +1063,16 @@ i._lew {
 	opacity: 0.2;
 }
 
+// notification count for administered page
+._5ugf {
+	background-color: $theme-tooltip-background !important;
+	color: $theme-tooltip-text !important;
+}
+
+// Timeline videos
+._2mbj ._3u33 {
+	background-color: transparent !important;
+}
+._2mbj ._3u33 i {
+	-webkit-filter: invert(50%) !important;
+}

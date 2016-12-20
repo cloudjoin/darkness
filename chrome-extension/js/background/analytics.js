@@ -17,8 +17,8 @@ var initializeAnalyticsOnStart = function() {
 		(function(i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
 			i[r] = i[r] || function() {
-					(i[r].q = i[r].q || []).push(arguments)
-				}, i[r].l = 1 * new Date();
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
 			a = s.createElement(o),
 				m = s.getElementsByTagName(o)[0];
 			a.async = 1;
@@ -41,10 +41,10 @@ var initializeAnalyticsOnStart = function() {
 var initializeAnalyticsAfterLoad = function() {
 	// Anonymously report extension is alive every 24h
 	repUserActive();
-	setInterval(function() {repUserActive()}, 1000 * 60 * 5); // 5 minutes
+	setInterval(function() { repUserActive() }, 1000 * 60 * 5); // 5 minutes
 
 	// Anonymously report current domain randomally. No user identifying info is sent
-	setInterval(function() {repCurrentDomainAnonymously()}, 1000 * 60); // 1 minute
+	setInterval(function() { repCurrentDomainAnonymously() }, 1000 * 60); // 1 minute
 };
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ var _reportPageview = function(path, title) {
 	var analyticsLoaded = typeof(ga) != 'undefined';
 	if (DEBUG_ANALYTICS) logWarn((analyticsLoaded ? 'Sending pageview:' : 'Not sending pageview:'), path);
 	if (analyticsLoaded) {
-		ga('send', {hitType: 'pageview', page: path, title: title});
+		ga('send', { hitType: 'pageview', page: path, title: title });
 	}
 };
 
@@ -105,7 +105,7 @@ var repVisitedTabAnonymously = function(tab) {
 	if (Math.random() * EVERY_N_CALLS <= 1) {
 		if (tab) {
 			var host = _getHostByUrl(tab.url);
-			_reportAnonymousStats('top-sites-visited', host); // No user identifying info is sent
+			_reportAnonymousStats('top-sites-visited-all', host); // No user identifying info is sent
 		}
 	}
 };
@@ -115,11 +115,11 @@ var repCurrentDomainAnonymously = function() {
 	var EVERY_N_CALLS = 1000; // Send a statistical sample
 	if (Math.random() * EVERY_N_CALLS <= 1) {
 		// Get the domain of the current tab
-		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+		chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
 			if (tabs[0]) {
 				var tab = tabs[0];
 				var host = _getHostByUrl(tab.url);
-				_reportAnonymousStats('top-sites-time', host); // No user identifying info is sent
+				_reportAnonymousStats('top-sites-time-all', host); // No user identifying info is sent
 			}
 		});
 	}

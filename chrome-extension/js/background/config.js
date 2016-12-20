@@ -32,11 +32,11 @@ var CONFIG = {
 			hostRegExp: new RegExp(GOOGLE_HOST_REGEXP, 'i'),
 			pathRegExp: new RegExp('^/(search|webhp)?$'), // pathRegExp is optional and unnecessary for most websites
 			creators: [ // Who wrote the 80%+ of the skin?
-				{name: 'Lior Grossman', link: 'http://liorgrossman.com'}
+				{ name: 'Lior Grossman', link: 'http://liorgrossman.com' }
 			],
 			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
-				{name: 'Itay Klein', link: 'http://itiktech.blogspot.co.il/'},
-				{name: 'Arseny Gurevich', link: 'https://www.facebook.com/Arseny.Gurevich'}
+				{ name: 'Itay Klein', link: 'http://itiktech.blogspot.co.il/' },
+				{ name: 'Arseny Gurevich', link: 'https://www.facebook.com/Arseny.Gurevich' }
 			]
 		},
 		'facebook': {
@@ -45,12 +45,23 @@ var CONFIG = {
 			support: 'full',
 			hostRegExp: new RegExp('^(www|web|beta)\.facebook\.com$', 'i'),
 			creators: [ // Who wrote the 80%+ of the skin?
-				{name: 'Marco Cazzaro', link: 'http://www.marcocazzaro.com/'}
+				{ name: 'Marco Cazzaro', link: 'http://www.marcocazzaro.com/' }
 			],
 			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
-				{name: 'Itamar Ostricher', link: 'http://www.ostricher.com/'},
-				{name: 'Oded Noam', link: 'http://www.odednoam.com/'},
-				{name: 'Theis Villumsen', link: 'https://folkmann.it/'}
+				{ name: 'Itamar Ostricher', link: 'http://www.ostricher.com/' },
+				{ name: 'Oded Noam', link: 'http://www.odednoam.com/' },
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
+			]
+		},
+		'messenger': {
+			key: 'messenger', // Must be the same as the object key
+			name: 'Messenger',
+			support: 'full',
+			hostRegExp: new RegExp('^(www|web|beta)\.messenger\.com$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{ name: 'Nicolas Botello', link: 'http://nicolasbotello.com/' }
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
 			]
 		},
 		'gmail': {
@@ -59,11 +70,12 @@ var CONFIG = {
 			support: 'full',
 			hostRegExp: new RegExp('^mail\.google\.com$', 'i'),
 			creators: [ // Who wrote the 80%+ of the skin?
-				{name: 'Damian Schmidt', link: 'http://iristormdesign.com/'}
+				{ name: 'Damian Schmidt', link: 'http://iristormdesign.com/' }
 			],
 			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
-				{name: 'Alon Diamant', link: 'http://www.alondiamant.com/'},
-				{name: 'Gilad Sasson', link: 'http://www.nekuda.co.il/en/'}
+				{ name: 'Alon Diamant', link: 'http://www.alondiamant.com/' },
+				{ name: 'Gilad Sasson', link: 'http://www.nekuda.co.il/en/' },
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
 			]
 		},
 		'inbox': {
@@ -72,9 +84,10 @@ var CONFIG = {
 			support: 'full',
 			hostRegExp: new RegExp('^inbox\.google\.com$', 'i'),
 			creators: [ // Who wrote the 80%+ of the skin?
-				{name: 'Theis Villumsen', link: 'https://folkmann.it/'}
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
 			],
-			topContributors: []
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+			]
 		},
 		'youtube': {
 			key: 'youtube', // Must be the same as the object key
@@ -82,12 +95,12 @@ var CONFIG = {
 			support: 'full',
 			hostRegExp: new RegExp('^www\.youtube\.com$', 'i'),
 			creators: [ // Who wrote the 80%+ of the skin?
-				{name: 'Kevin Mata'}
+				{ name: 'Kevin Mata' }
 			],
 			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
-				{name: 'Mayrun Digmi', link: 'http://www.mayrundigmi.com/'},
-				{name: 'Lior Grossman', link: 'http://liorgrossman.com'},
-				{name: 'Theis Villumsen', link: 'https://folkmann.it/'}
+				{ name: 'Mayrun Digmi', link: 'http://www.mayrundigmi.com/' },
+				{ name: 'Lior Grossman', link: 'http://liorgrossman.com' },
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
 			]
 		},
 		'github': {
@@ -96,24 +109,97 @@ var CONFIG = {
 			support: 'full',
 			hostRegExp: new RegExp('^(gist\.|)github\.com$', 'i'),
 			creators: [ // Who wrote the 80%+ of the skin?
-				{name: 'Theis Villumsen', link: 'https://folkmann.it/'},
-				{name: 'Nicolas Botello', link: 'http://nicolasbotello.com/'}
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' },
+				{ name: 'Nicolas Botello', link: 'http://nicolasbotello.com/' }
 			],
 			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
-				{name: 'Lior Grossman', link: 'http://liorgrossman.com'}
+				{ name: 'Lior Grossman', link: 'http://liorgrossman.com' }
 			]
+		},
+		'sharelatex': {
+			key: 'sharelatex', // Must be the same as the object key
+			name: 'ShareLaTeX',
+			support: 'full',
+			hostRegExp: new RegExp('\.sharelatex\.com$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+			]
+		},
+		'twitter': {
+			key: 'twitter', // Must be the same as the object key
+			name: 'Twitter',
+			support: 'full',
+			hostRegExp: new RegExp('^twitter\.com$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+				{ name: 'Lior Grossman', link: 'http://liorgrossman.com' }
+			]
+		},
+		'amazon': {
+			key: 'amazon', // Must be the same as the object key
+			name: 'Amazon',
+			support: 'in-development', // This skin still requires further improvement, help us by improving it! 
+			hostRegExp: new RegExp('\.amazon\.(co.uk|com|es|de|co.jp)$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{ name: 'Guillermo Muela', link: 'https://github.com/Gmuela' }
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+			]
+		},
+		'serverfault': {
+			key: 'serverfault', // Must be the same as the object key
+			name: 'ServerFault',
+			support: 'ask-developers',
+			hostRegExp: new RegExp('^serverfault\.com$', 'i')
 		},
 		'stackoverflow': {
 			key: 'stackoverflow', // Must be the same as the object key
 			name: 'StackOverflow',
+			support: 'full',
+			hostRegExp: new RegExp('^stackoverflow\.com$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{name: 'Nicolas Botello', link: 'http://nicolasbotello.com/'}
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+			]
+		},
+		'askUbuntu': {
+			key: 'askUbuntu', // Must be the same as the object key
+			name: 'askUbuntu',
 			support: 'ask-developers',
-			hostRegExp: new RegExp('^stackoverflow\.com$', 'i')
+			hostRegExp: new RegExp('^askubuntu\.com$', 'i')
 		},
 		'trello': {
 			key: 'trello', // Must be the same as the object key
 			name: 'Trello',
-			support: 'ask-developers',
+			support: 'ask-developers', // Show a call to action for developers to join our community (don't show it in dev mode)
 			hostRegExp: new RegExp('^trello\.com$', 'i')
+		},
+		'dropbox': {
+			key: 'dropbox', // Must be the same as the object key
+			name: 'Dropbox',
+			support: 'full',
+			hostRegExp: new RegExp('^www\.dropbox\.com$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+			]
+		},
+		'reddit': {
+			key: 'reddit', // Must be the same as the object key
+			name: 'Reddit',
+			support: 'full',
+			hostRegExp: new RegExp('^www\.reddit\.com$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+			]
 		}
 	}
 };
