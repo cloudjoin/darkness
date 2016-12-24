@@ -62,6 +62,7 @@ var CONFIG = {
 				{ name: 'Nicolas Botello', link: 'http://nicolasbotello.com/' }
 			],
 			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+				{ name: 'Lior Grossman', link: 'http://liorgrossman.com' }
 			]
 		},
 		'gmail': {
@@ -83,6 +84,28 @@ var CONFIG = {
 			name: 'Inbox',
 			support: 'full',
 			hostRegExp: new RegExp('^inbox\.google\.com$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+			]
+		},
+		'docs': {
+			key: 'docs', // Must be the same as the object key
+			name: 'Google Docs',
+			support: 'in-development',
+			hostRegExp: new RegExp('^docs\.google\.com$', 'i'),
+			creators: [ // Who wrote the 80%+ of the skin?
+				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
+			],
+			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
+			]
+		},
+		'cloudflare': {
+			key: 'cloudflare', // Must be the same as the object key
+			name: 'Cloudflare',
+			support: 'full',
+			hostRegExp: new RegExp('^www\.cloudflare\.com$', 'i'),
 			creators: [ // Who wrote the 80%+ of the skin?
 				{ name: 'Theis Villumsen', link: 'https://folkmann.it/' }
 			],
@@ -167,8 +190,8 @@ var CONFIG = {
 			topContributors: [ // Top 3 contributors of fixes & improvements, excluding the creator
 			]
 		},
-		'askUbuntu': {
-			key: 'askUbuntu', // Must be the same as the object key
+		'askubuntu': {
+			key: 'askubuntu', // Must be the same as the object key
 			name: 'askUbuntu',
 			support: 'ask-developers',
 			hostRegExp: new RegExp('^askubuntu\.com$', 'i')

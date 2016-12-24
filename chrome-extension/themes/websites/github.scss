@@ -323,6 +323,11 @@ rect[fill="#eeeeee"], .legend > li:nth-child(1){
     color: $theme-text !important;
 }
 
+// Images inside readmy
+.readme > .markdown-body img {
+	background-color: Transparent !important;
+}
+
 //edit link shows up as a button change background
 .muted-link {
     background: $theme-background !important;
@@ -641,11 +646,17 @@ rect[fill="#eeeeee"], .legend > li:nth-child(1){
     }
 }
 
-
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 // Misc
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 // "Learn Git and GitHub without any code!" message on the homepage
 .intro-shelf, .intro-shelf .shelf-lead {
     color: $theme-text !important;
+}
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+// Explore Github
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+.showcase-page-pattern, .exploregrid-item-header {
+        -webkit-filter: invert(0) !important;
 }
